@@ -5,6 +5,8 @@
  * @LastEditors: yao fanghao
  */
 
+// https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/
+
 // 方法1
 int hammingWeight(uint32_t n) {
     int sum = 0;
