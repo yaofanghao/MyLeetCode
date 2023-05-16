@@ -20,6 +20,7 @@ public:
 
 
 // 方法2
+// 最大堆方法
 class Solution {
 public:
     vector<int> getLeastNumbers(vector<int>& arr, int k) {

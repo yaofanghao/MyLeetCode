@@ -18,20 +18,20 @@ typedef struct {
 
 MinStack* minStackCreate() {
     MinStack* p = (MinStack*)malloc(sizeof(MinStack));
-    p->top = -1;
+    p->top = -1; // 空时栈顶指针为-1
     return p;
 }
 
 void minStackPush(MinStack* obj, int x) {
-    if(obj->top == Size-1)
+    if(obj->top == Size-1) // 栈满了
         return;
-    obj->stack[++obj->top] = x;
+    obj->stack[++obj->top] = x; // 栈顶指针先加1 再把x放入
 }
 
 void minStackPop(MinStack* obj) {
-    if(obj->top == -1)
+    if(obj->top == -1) // 栈空了
         return;
-    obj->top--;
+    obj->top--; // 栈顶指针减1
 }
 
 int minStackTop(MinStack* obj) {
@@ -41,7 +41,8 @@ int minStackTop(MinStack* obj) {
 int minStackMin(MinStack* obj) {
     if(obj->top == 0) return obj->stack[0];
 
-    int min = obj->stack[0];
+    // 从栈头到尾遍历查找最小
+    int min = obj->stack[0]; 
     for (int i = obj->top; i >= 0; --i)
     {
         min = min < obj->stack[i] ? min:obj->stack[i];

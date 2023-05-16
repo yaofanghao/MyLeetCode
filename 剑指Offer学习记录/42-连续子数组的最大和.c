@@ -5,6 +5,7 @@
  * @LastEditors: yao fanghao
  */
 
+// 动态规划
 int maxSubArray(int* nums, int numsSize) {
     int pre = 0, maxAns = nums[0];
     for (int i = 0; i < numsSize; i++) {

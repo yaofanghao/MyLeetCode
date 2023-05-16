@@ -4,6 +4,8 @@
  * @LastEditTime: 2023-05-14 22:06:26
  * @LastEditors: yao fanghao
  */
+
+// 用C语言实现哈希表
 struct hashTable {
     int key;
     int val;

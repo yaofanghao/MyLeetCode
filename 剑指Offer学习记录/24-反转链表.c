@@ -12,7 +12,7 @@
  * };
  */
 
-
+// 定义哑节点的做法
 struct ListNode* reverseList(struct ListNode* head){
     struct ListNode* pre = NULL;
     struct ListNode* cur = head;
