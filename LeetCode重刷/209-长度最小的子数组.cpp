@@ -2,6 +2,13 @@
 #include <vector>
 using namespace std;
 
+void print_between(int start, int end, vector<int>& nums){
+    for(int i=start; i<end+1; i++){
+        cout<<nums[i]<<" ";
+    }
+    cout<<endl;
+}
+
 int minSubArrayLen(int target, vector<int>& nums) {
     int start=0, end=0, sum=0;
     int min_length = INT_MAX;
@@ -11,6 +18,8 @@ int minSubArrayLen(int target, vector<int>& nums) {
             min_length = min(min_length, end-start+1);
             sum -= nums[start];
             ++start;
+
+            print_between(start, end, nums);
         }
         end++;
     }    
@@ -33,7 +42,7 @@ int main(){
             break;
         }
     }
-
-    cout<<"min length is: "<<minSubArrayLen(target,nums)<<endl;
+    int res = minSubArrayLen(target,nums);
+    cout<<"min length is: "<<res<<endl;
     return 0;
 }
